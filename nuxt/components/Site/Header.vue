@@ -1,8 +1,10 @@
 <template>
-  <header class="py-11">
+  <header>
     <div class="container">
-      <div class="flex items-center">
-        <div class="text-4xl font-semibold uppercase underline">Ace Visual</div>
+      <div class="flex items-center border-b-4 border-neutral-200 px-8 py-11">
+        <div class="text-4xl font-semibold uppercase underline">
+          <NuxtLink to="/">Ace Visual</NuxtLink>
+        </div>
 
         <nav class="ml-auto">
           <ul class="flex items-center gap-5 text-sm font-semibold uppercase">

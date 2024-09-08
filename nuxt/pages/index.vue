@@ -10,9 +10,9 @@
 
 <script setup lang="ts">
 import type {QueryProject} from '~/types/project'
-import * as project from '~/groq/project'
+import * as projectGroq from '~/groq/project'
 
-const {data} = useSanityQuery<QueryProject[]>(project.findAllByCategory(), {
+const {data} = await useSanityQuery<QueryProject[]>(projectGroq.findAllByCategory(), {
   category: 'portraits',
 })
 </script>
