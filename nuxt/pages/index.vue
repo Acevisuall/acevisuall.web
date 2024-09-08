@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    Hello world
-
     <ul>
       <li v-for="project in data" :key="`project-${project._id}`">
         {{ project.title }}
