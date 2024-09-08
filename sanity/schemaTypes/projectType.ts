@@ -89,14 +89,42 @@ export const projectType = defineType({
       of: [
         defineArrayMember({
           type: 'image',
+          name: 'image',
+          title: 'Image',
           options: {
             accept: 'image/jpeg',
           },
         }),
         defineArrayMember({
-          type: 'file',
-          options: {
-            accept: 'video.mp4',
+          type: 'object',
+          title: 'Video',
+          name: 'video',
+          fields: [
+            defineField({
+              name: 'file',
+              title: 'Video File',
+              type: 'file',
+              validation: (rule) => rule.required(),
+              options: {
+                accept: 'video/mp4',
+              },
+            }),
+            defineField({
+              name: 'placeholder',
+              title: 'Placeholder Image',
+              description: 'Video fallback image',
+              type: 'image',
+              validation: (rule) => rule.required(),
+              options: {
+                accept: 'image/jpeg',
+              },
+            }),
+          ],
+          preview: {
+            select: {
+              media: 'placeholder',
+              title: 'Video',
+            },
           },
         }),
       ],
