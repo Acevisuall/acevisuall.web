@@ -1,12 +1,12 @@
 <template>
   <header>
     <div class="container">
-      <div class="flex items-center border-b-4 border-neutral-200 px-8 py-11">
-        <div class="text-4xl font-semibold uppercase underline">
-          <NuxtLink to="/">Ace Visual</NuxtLink>
+      <div class="flex items-center border-b-4 border-neutral-200 py-6 md:px-8 md:py-11">
+        <div class="text-2xl font-semibold uppercase underline md:text-4xl">
+          <NuxtLink to="/">Ace Visuall</NuxtLink>
         </div>
 
-        <nav class="ml-auto">
+        <nav class="ml-auto max-md:hidden">
           <ul class="flex items-center gap-5 text-sm font-semibold uppercase">
             <li class="text-gray-400">Category 1</li>
             <li>Category 2</li>

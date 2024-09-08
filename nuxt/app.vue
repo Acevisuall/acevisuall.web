@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex min-h-screen flex-col">
     <NuxtLoadingIndicator color="#000000" />
 
     <SiteHeader class="mb-8" />

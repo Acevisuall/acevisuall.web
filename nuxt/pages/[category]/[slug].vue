@@ -6,10 +6,18 @@
 
     <div class="container">
       <Swiper
-        slides-per-view="auto"
+        :slides-per-view="1"
         :space-between="20"
-        :modules="[SwiperNavigation]"
+        :modules="[SwiperNavigation, SwiperPagination]"
         :navigation="true"
+        :pagination="{
+          dynamicBullets: true,
+        }"
+        :breakpoints="{
+          768: {
+            slidesPerView: 'auto',
+          },
+        }"
         class="opacity-0 transition-opacity duration-200 [&.swiper-initialized]:opacity-100"
       >
         <SwiperSlide v-for="(item, index) in gallery" :key="`gallery.item.${index}`" class="slide">
@@ -68,9 +76,14 @@ const urlFor = (source?: string): string | undefined => {
 .swiper {
   --swiper-navigation-color: #fff;
   --swiper-navigation-size: 40px;
+  --swiper-pagination-color: #000;
+}
+
+.swiper :deep(.swiper-pagination) {
+  @apply static mx-auto mt-3 transform-none;
 }
 
 .slide {
-  @apply h-[400px] w-auto;
+  @apply flex h-auto items-center md:h-[400px] md:w-auto;
 }
 </style>
