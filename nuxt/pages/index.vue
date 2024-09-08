@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import type {Project} from '~/types/schema'
+import * as project from '~/groq/project'
 
-const query = groq`*[_type == 'project']`
-const {data} = useSanityQuery<Project[]>(query, {topic: 'News'})
+const {data} = useSanityQuery<Project[]>(project.findAll())
 </script>
