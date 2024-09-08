@@ -14,5 +14,7 @@
 import type {Project} from '~/types/schema'
 import * as project from '~/groq/project'
 
-const {data} = useSanityQuery<Project[]>(project.findAll())
+const {data} = useSanityQuery<Project[]>(project.findAllByCategory(), {
+  category: 'portraits',
+})
 </script>
