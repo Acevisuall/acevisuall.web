@@ -7,6 +7,7 @@ const sanityConfig = {
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
+  css: ['video.js/dist/video-js.css'],
   modules: [
     '@nuxtjs/sanity',
     '@nuxtjs/tailwindcss',
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxt/image',
     '@nuxt/fonts',
+    '@nuxt/icon',
   ],
   sanity: sanityConfig,
   tailwindcss: {

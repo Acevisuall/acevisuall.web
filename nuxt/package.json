@@ -12,20 +12,23 @@
   "dependencies": {
     "@nuxt/eslint": "^0.5.6",
     "@nuxt/fonts": "^0.7.2",
+    "@nuxt/icon": "latest",
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/sanity": "^1.12.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@sanity/image-url": "^1.0.2",
+    "@videojs-player/vue": "^1.0.0",
     "@yeger/vue-masonry-wall": "^5.0.15",
     "nuxt": "^3.13.0",
     "nuxt-swiper": "^1.2.2",
+    "video.js": "^8.17.3",
     "vue": "latest",
     "vue-router": "latest"
   },
-  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6"
-  }
+  },
+  "packageManager": "yarn@3.6.0+sha512.418e45c2268c4d6b69a28f3939084b5853d5f392c43c0b5588bd1995a96e328414ae4b7777a8980c64bad4328c52586ff879b289f98ae65372a55fa4d0ff70dd"
 }
