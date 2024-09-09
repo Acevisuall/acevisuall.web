@@ -8,10 +8,16 @@
       <Swiper
         :slides-per-view="1"
         :space-between="20"
-        :modules="[SwiperNavigation, SwiperPagination]"
+        :modules="[SwiperNavigation, SwiperPagination, SwiperFreeMode, SwiperMousewheel]"
         :navigation="true"
         :pagination="{
           dynamicBullets: true,
+        }"
+        :free-mode="{
+          enabled: true,
+        }"
+        :mousewheel="{
+          forceToAxis: true,
         }"
         :breakpoints="{
           768: {

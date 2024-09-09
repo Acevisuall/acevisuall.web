@@ -13,6 +13,6 @@ import type {QueryProject} from '~/types/project'
 import * as projectGroq from '~/groq/project'
 
 const {data} = await useSanityQuery<QueryProject[]>(projectGroq.findAllByCategory(), {
-  category: 'portraits',
+  category: 'portrait',
 })
 </script>
