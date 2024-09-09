@@ -1,10 +1,18 @@
 <template>
   <div class="container">
-    <ul class="flex flex-wrap gap-5">
-      <li v-for="project in data" :key="`project-${project._id}`">
-        <FeedProject :project="project" />
-      </li>
-    </ul>
+    <MasonryWall
+      v-if="data?.length"
+      :items="data"
+      :ssr-columns="1"
+      :column-width="[300]"
+      :gap="16"
+      :max-columns="3"
+      class="mb-8"
+    >
+      <template #default="{item}">
+        <FeedProject :project="item" />
+      </template>
+    </MasonryWall>
   </div>
 </template>
 

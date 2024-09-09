@@ -9,6 +9,7 @@
           crop: featuredImage?.crop,
         }"
         sizes="100vw sm:50vw md:400px"
+        class="w-full"
       />
     </NuxtLink>
     <div
