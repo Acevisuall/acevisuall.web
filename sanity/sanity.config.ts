@@ -5,6 +5,7 @@ import {singletonTools} from 'sanity-plugin-singleton-tools'
 import {media} from 'sanity-plugin-media'
 import {schemaTypes} from './schemaTypes'
 import {SetAndPublishAction} from './actions/SetAndPublishAction'
+import {structure} from './structure'
 
 export default defineConfig({
   name: 'default',
@@ -13,7 +14,7 @@ export default defineConfig({
   projectId: 'yj5ogbk2',
   dataset: process.env.NODE_ENV === 'development' ? 'development' : 'production',
 
-  plugins: [structureTool(), visionTool(), singletonTools(), media()],
+  plugins: [structureTool({structure}), visionTool(), singletonTools(), media()],
 
   schema: {
     types: schemaTypes,
