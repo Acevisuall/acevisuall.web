@@ -46,6 +46,21 @@ export type Geopoint = {
   alt?: number
 }
 
+export type SiteSettings = {
+  _id: string
+  _type: 'siteSettings'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  navBarItems?: Array<{
+    _ref: string
+    _type: 'reference'
+    _weak?: boolean
+    _key: string
+    [internalGroqTypeReferenceTo]?: 'category'
+  }>
+}
+
 export type Project = {
   _id: string
   _type: 'project'
@@ -223,6 +238,7 @@ export type AllSanitySchemaTypes =
   | SanityImagePalette
   | SanityImageDimensions
   | Geopoint
+  | SiteSettings
   | Project
   | SanityFileAsset
   | SanityImageCrop

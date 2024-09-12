@@ -8,8 +8,13 @@
 
         <nav class="ml-auto max-md:hidden">
           <ul class="flex items-center gap-5 text-sm font-semibold uppercase">
-            <li class="text-gray-400">Category 1</li>
-            <li>Category 2</li>
+            <li v-for="{slug, name} in navBarItems" :key="`nav.bar.item.${slug.current}`">
+              <NuxtLink
+                class="text-black hover:underline [&.router-link-active]:text-gray-400"
+                :to="`/${slug.current}`"
+                >{{ name }}</NuxtLink
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -17,4 +22,15 @@
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import * as siteSettingsQuery from '~/groq/siteSettings'
+import type {SiteSettingsQuery} from '~/types/siteSettings'
+
+const sanity = useSanity()
+
+const {data: settings} = await useAsyncData<SiteSettingsQuery>('site-settings', () =>
+  sanity.fetch(siteSettingsQuery.findAll()),
+)
+
+const navBarItems = computed(() => settings.value?.navBarItems)
+</script>
