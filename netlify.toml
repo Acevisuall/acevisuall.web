@@ -1,0 +1,4 @@
+[build]
+  base    = "nuxt"
+  command = "yarn && yarn build"
+  publish = "nuxt/dist"
