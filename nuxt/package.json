@@ -21,7 +21,7 @@
     "@yeger/vue-masonry-wall": "^5.0.15",
     "nuxt": "^3.13.0",
     "nuxt-swiper": "^1.2.2",
-    "video.js": "^8.17.3",
+    "video.js": "^7.21.6",
     "vue": "latest",
     "vue-router": "latest"
   },
@@ -29,6 +29,5 @@
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }
