@@ -4,8 +4,9 @@
       v-if="!completed"
       type="form"
       id="contact-us-form"
+      name="contact_us"
       submit-label="Send"
-      data-netlify="true"
+      netlify
       @submit="onSubmit"
     >
       <p class="mb-4">Name (required)</p>
@@ -43,7 +44,7 @@
         validation="length:0,1000|required"
       />
 
-      <FormKit type="hidden" name="form-name" value="contact us" />
+      <FormKit type="hidden" name="form-name" value="contact_us" />
     </FormKit>
     <div v-else>
       <h2 class="text-3xl font-bold">Thank you for reaching out!</h2>
