@@ -61,6 +61,29 @@ export type SiteSettings = {
   }>
 }
 
+export type About = {
+  _id: string
+  _type: 'about'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  heroImage?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  title?: string
+  intro?: string
+  ctaText?: string
+  ctaLink?: string
+}
+
 export type Homepage = {
   _id: string
   _type: 'homepage'
@@ -260,6 +283,7 @@ export type AllSanitySchemaTypes =
   | SanityImageDimensions
   | Geopoint
   | SiteSettings
+  | About
   | Homepage
   | Project
   | SanityFileAsset
