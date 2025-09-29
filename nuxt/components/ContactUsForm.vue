@@ -61,7 +61,7 @@ const encode = (data: Record<string, any>) => {
 }
 
 const onSubmit = (fields: Record<string, any>) => {
-  fetch('/', {
+  fetch('/contact-us', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: encode({
