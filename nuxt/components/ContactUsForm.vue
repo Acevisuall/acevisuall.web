@@ -4,7 +4,6 @@
       v-if="!completed"
       type="form"
       id="contact-us-form"
-      name="contact_us"
       submit-label="Send"
       @submit="onSubmit"
     >
@@ -13,15 +12,15 @@
       <div class="flex gap-4">
         <FormKit
           type="text"
-          name="first_name"
-          id="first_name"
+          name="first-name"
+          id="first-name"
           validation="required|length:3"
           label="First Name"
         />
         <FormKit
           type="text"
-          name="last_name"
-          id="last_name"
+          name="last-name"
+          id="last-name"
           validation="required|length:3"
           label="Last Name"
         />
@@ -43,8 +42,6 @@
         label="Message (required)"
         validation="length:0,1000|required"
       />
-
-      <FormKit type="hidden" name="form-name" value="contact_us" />
     </FormKit>
     <div v-else>
       <h2 class="text-3xl font-bold">Thank you for reaching out!</h2>
@@ -67,7 +64,7 @@ const onSubmit = (fields: Record<string, any>) => {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: encode({
-      'form-name': 'contact_us',
+      'form-name': 'contact-us',
       ...fields,
     }),
   })
