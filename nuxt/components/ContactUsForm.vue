@@ -8,7 +8,7 @@
       submit-label="Send"
       @submit="onSubmit"
     >
-      <FormKit type="text" name="bot-field" outer-class="hidden" />
+      <FormKit type="text" name="bot-field" value="" outer-class="hidden" />
       <p class="mb-4">Name (required)</p>
       <div class="flex gap-4">
         <FormKit
@@ -43,6 +43,8 @@
         label="Message (required)"
         validation="length:0,1000|required"
       />
+
+      <FormKit type="hidden" name="form-name" value="contact_us" />
     </FormKit>
     <div v-else>
       <h2 class="text-3xl font-bold">Thank you for reaching out!</h2>
@@ -56,7 +58,7 @@ const completed = ref(false)
 
 const encode = (data: Record<string, any>) => {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
 }
 
