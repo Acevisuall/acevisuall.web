@@ -17,10 +17,12 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
+    '@formkit/nuxt',
   ],
   sanity: sanityConfig,
   tailwindcss: {
     config: {
+      content: ['./formkit.theme.ts'],
       theme: {
         container: {
           center: true,

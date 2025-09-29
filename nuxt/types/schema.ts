@@ -61,6 +61,16 @@ export type SiteSettings = {
   }>
 }
 
+export type ContactUs = {
+  _id: string
+  _type: 'contactUs'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  title?: string
+  intro?: string
+}
+
 export type About = {
   _id: string
   _type: 'about'
@@ -283,6 +293,7 @@ export type AllSanitySchemaTypes =
   | SanityImageDimensions
   | Geopoint
   | SiteSettings
+  | ContactUs
   | About
   | Homepage
   | Project
