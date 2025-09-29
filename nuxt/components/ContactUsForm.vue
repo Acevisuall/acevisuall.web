@@ -56,20 +56,14 @@
 <script setup lang="ts">
 const completed = ref(false)
 
-const encode = (data: Record<string, any>) => {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&')
-}
-
 const onSubmit = (fields: Record<string, any>) => {
   $fetch('/', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: encode({
+    body: {
       'form-name': 'contact_us',
       ...fields,
-    }),
+    },
   })
     .then(() => {
       completed.value = true
