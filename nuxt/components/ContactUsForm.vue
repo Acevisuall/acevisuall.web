@@ -4,6 +4,7 @@
       v-if="!completed"
       type="form"
       id="contact-us-form"
+      name="contact-us"
       submit-label="Send"
       @submit="onSubmit"
     >
