@@ -6,9 +6,9 @@
       id="contact-us-form"
       name="contact_us"
       submit-label="Send"
-      data-netlify="true"
       @submit="onSubmit"
     >
+      <FormKit type="text" name="bot-field" outer-class="hidden" />
       <p class="mb-4">Name (required)</p>
       <div class="flex gap-4">
         <FormKit
@@ -43,8 +43,6 @@
         label="Message (required)"
         validation="length:0,1000|required"
       />
-
-      <FormKit type="hidden" name="form-name" value="contact_us" />
     </FormKit>
     <div v-else>
       <h2 class="text-3xl font-bold">Thank you for reaching out!</h2>
@@ -67,7 +65,7 @@ const onSubmit = (fields: Record<string, any>) => {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: encode({
-      'form-name': 'contact-us',
+      'form-name': 'contact_us',
       ...fields,
     }),
   })
