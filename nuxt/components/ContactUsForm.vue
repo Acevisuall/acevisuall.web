@@ -6,7 +6,7 @@
       id="contact-us-form"
       name="contact_us"
       submit-label="Send"
-      netlify
+      data-netlify="true"
       @submit="onSubmit"
     >
       <p class="mb-4">Name (required)</p>
@@ -63,16 +63,13 @@ const encode = (data: Record<string, any>) => {
 }
 
 const onSubmit = (fields: Record<string, any>) => {
-  const formData = new FormData()
-
-  for (const [key, value] of Object.entries(fields)) {
-    formData.append(key, value)
-  }
-
   $fetch('/', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: encode(fields),
+    body: encode({
+      'form-name': 'contact-us',
+      ...fields,
+    }),
   })
     .then(() => {
       completed.value = true
