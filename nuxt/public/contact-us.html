@@ -11,16 +11,16 @@
       name="contact_us"
       action="/"
       netlify-honeypot="bot-field"
-      data-netlify="true"
+      netlify
       method="post"
       hidden
     >
       <input type="hidden" name="form-name" value="contact_us" />
-      <input type="text" name="first_name" />
-      <input type="text" name="last_name" />
+      <input id="first_name" type="text" name="first_name" />
+      <input id="last_name" type="text" name="last_name" />
       <input type="text" name="bot-field" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
+      <input id="email" type="email" name="email" />
+      <textarea id="message" name="message"></textarea>
     </form>
   </body>
 </html>
