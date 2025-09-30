@@ -5,7 +5,7 @@
         <NuxtImg v-if="heroImage" :src="heroImage.asset?._ref" />
       </figure>
       <div class="flex flex-col justify-center">
-        <h1 class="leading-tighter mb-4 text-8xl font-black uppercase">{{ title }}</h1>
+        <h1 class="leading-tighter mb-4 text-8xl font-extrabold uppercase">{{ title }}</h1>
         <div v-if="introText">{{ introText }}</div>
         <div v-if="ctaText && ctaLink" class="mt-16">
           <NuxtLink

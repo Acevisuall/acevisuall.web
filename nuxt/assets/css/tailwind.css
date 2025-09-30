@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply font-poppings;
+    @apply font-montserrat font-semibold;
   }
 }

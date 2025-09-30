@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         },
         extend: {
           fontFamily: {
-            poppings: ['"Poppins"', 'sans-serif'],
+            montserrat: ['"Montserrat"', 'sans-serif'],
           },
         },
       },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   },
   fonts: {
     defaults: {
-      weights: [400, 500, 600],
+      weights: [400, 500, 600, 800],
     },
   },
   image: {

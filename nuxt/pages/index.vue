@@ -6,7 +6,7 @@
       <NuxtImg v-if="heroImage" :src="heroImage.asset?._ref" />
 
       <h1
-        class="absolute left-1/2 top-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-8 text-center text-5xl font-black uppercase text-white"
+        class="absolute left-1/2 top-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-8 text-center text-5xl font-extrabold uppercase text-white"
       >
         {{ heroText }}
       </h1>

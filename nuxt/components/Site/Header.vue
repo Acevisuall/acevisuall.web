@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="container">
-      <div class="flex items-center border-b-4 border-neutral-200 py-6 md:px-8 md:py-11">
-        <div class="text-2xl font-semibold uppercase underline md:text-4xl">
+      <div class="flex items-center border-b-4 border-neutral-200 py-6">
+        <div class="text-2xl font-extrabold uppercase md:text-2xl">
           <NuxtLink to="/">Ace Visuall</NuxtLink>
         </div>
 
