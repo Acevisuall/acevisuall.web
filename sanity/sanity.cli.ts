@@ -6,4 +6,7 @@ export default defineCliConfig({
     dataset: 'production',
   },
   studioHost: 'acevisuall',
+  deployment: {
+    appId: 'xzq7wecelk0lcu69snaipt2g',
+  },
 })
