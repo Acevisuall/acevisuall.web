@@ -1,5 +1,5 @@
 <template>
-  <div class="container mb-8">
+  <div class="container mt-10 mb-8">
     <div class="grid grid-cols-2 gap-32">
       <div>
         <h1 class="leading-tighter mb-4 text-7xl font-extrabold uppercase">{{ title }}</h1>
