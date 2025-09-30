@@ -23,4 +23,8 @@ const {data} = await useSanityQuery<Homepage>(homepageGroq.findAll(), {})
 const heroImage = computed(() => data.value?.heroImage)
 const heroText = computed(() => data.value?.heroText)
 const introText = computed(() => data.value?.intro)
+
+useHead({
+  titleTemplate: null,
+})
 </script>

@@ -53,7 +53,11 @@ if (!data.value) {
   })
 }
 
-const {title, gallery} = useProject(data.value)
+const {title, gallery, category} = useProject(data.value)
+
+useHead({
+  title: title ? `${title} | ${category.name}` : 'Project',
+})
 </script>
 
 <style scoped>

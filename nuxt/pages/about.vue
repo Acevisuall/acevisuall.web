@@ -30,4 +30,8 @@ const title = computed(() => data.value?.title)
 const introText = computed(() => data.value?.intro)
 const ctaText = computed(() => data.value?.ctaText)
 const ctaLink = computed(() => data.value?.ctaLink)
+
+useHead({
+  title: 'About Us',
+})
 </script>
