@@ -15,6 +15,13 @@
                 >{{ name }}</NuxtLink
               >
             </li>
+            <li v-for="{name, slug} in staticItems" :key="`nav.bar.item.${slug.current}`">
+              <NuxtLink
+                class="text-black hover:underline [&.router-link-active]:text-gray-400 tracking-wide"
+                :to="`/${slug.current}`"
+                >{{ name }}</NuxtLink
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -33,4 +40,9 @@ const {data: settings} = await useAsyncData<SiteSettingsQuery>('site-settings', 
 )
 
 const navBarItems = computed(() => settings.value?.navBarItems)
+
+const staticItems = [
+  {name: 'About', slug: {current: 'about'}},
+  {name: 'Contact', slug: {current: 'contact'}},
+]
 </script>

@@ -1,7 +1,7 @@
 const sanityConfig = {
   projectId: 'yj5ogbk2',
   // dataset: process.env.NODE_ENV !== 'production' ? 'development' : 'production',
-  dataset: 'development',
+  dataset: 'production',
 }
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
