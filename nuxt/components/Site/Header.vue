@@ -7,10 +7,10 @@
         </div>
 
         <nav class="ml-auto max-md:hidden">
-          <ul class="flex items-center gap-5 text-sm font-semibold uppercase">
+          <ul class="flex items-center gap-5 text-sm font-semibold">
             <li v-for="{slug, name} in navBarItems" :key="`nav.bar.item.${slug.current}`">
               <NuxtLink
-                class="text-black hover:underline [&.router-link-active]:text-gray-400"
+                class="text-black hover:underline [&.router-link-active]:text-gray-400 tracking-wide"
                 :to="`/${slug.current}`"
                 >{{ name }}</NuxtLink
               >

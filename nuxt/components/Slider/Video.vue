@@ -1,6 +1,6 @@
 <template>
   <div class="relative h-full">
-    <NuxtImg class="h-full" :src="item.placeholder.asset?._ref" />
+    <NuxtImg class="h-full object-cover" :src="item.placeholder.asset?._ref" />
     <div class="overlay absolute inset-0 flex items-center justify-center">
       <button @click="open = true">
         <Icon name="octicon:play-24" class="text-6xl hover:opacity-60" />
