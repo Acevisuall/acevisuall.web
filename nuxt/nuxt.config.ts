@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 const sanityConfig = {
   projectId: 'yj5ogbk2',
   // dataset: process.env.NODE_ENV !== 'production' ? 'development' : 'production',
@@ -8,10 +10,9 @@ const sanityConfig = {
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
-  css: ['video.js/dist/video-js.css'],
+  css: ['~/assets/css/main.css', 'video.js/dist/video-js.css'],
   modules: [
     '@nuxtjs/sanity',
-    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     'nuxt-swiper',
     '@nuxt/image',
@@ -20,22 +21,6 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
   ],
   sanity: sanityConfig,
-  tailwindcss: {
-    config: {
-      content: ['./formkit.theme.ts'],
-      theme: {
-        container: {
-          center: true,
-          padding: '20px',
-        },
-        extend: {
-          fontFamily: {
-            montserrat: ['"Montserrat"', 'sans-serif'],
-          },
-        },
-      },
-    },
-  },
   fonts: {
     defaults: {
       weights: [400, 500, 600, 800],
@@ -44,5 +29,8 @@ export default defineNuxtConfig({
   image: {
     provider: 'sanity',
     sanity: sanityConfig,
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 })
