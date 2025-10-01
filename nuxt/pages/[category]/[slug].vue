@@ -61,6 +61,8 @@ useHead({
 </script>
 
 <style scoped>
+@reference '~/assets/css/main.css';
+
 .swiper {
   --swiper-navigation-color: #fff;
   --swiper-navigation-size: 40px;
