@@ -1,8 +1,10 @@
 <template>
-  <div class="container mt-10 mb-8">
-    <div class="grid grid-cols-2 gap-32">
+  <div class="container mb-8 mt-10">
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-32">
       <div>
-        <h1 class="leading-tighter mb-4 text-7xl font-extrabold uppercase">{{ title }}</h1>
+        <h1 class="leading-tighter mb-4 text-5xl font-extrabold uppercase md:text-7xl">
+          {{ title }}
+        </h1>
         <div v-if="introText">{{ introText }}</div>
       </div>
       <ContactUsForm />

@@ -10,7 +10,7 @@
     >
       <FormKit type="text" name="bot-field" value="" outer-class="hidden" />
       <p class="mb-4">Name (required)</p>
-      <div class="flex gap-4">
+      <div class="gap-4 md:flex">
         <FormKit
           type="text"
           name="first-name"
