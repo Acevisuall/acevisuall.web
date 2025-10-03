@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@formkit/nuxt',
+    'v-gsap-nuxt',
   ],
   sanity: sanityConfig,
   fonts: {

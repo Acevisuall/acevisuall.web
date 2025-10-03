@@ -13,10 +13,9 @@
       />
 
       <h1
+        v-gsap.animateText.slow="heroText"
         class="absolute left-1/2 top-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 px-4 text-center text-5xl font-extrabold uppercase text-white"
-      >
-        {{ heroText }}
-      </h1>
+      ></h1>
     </figure>
   </div>
 </template>

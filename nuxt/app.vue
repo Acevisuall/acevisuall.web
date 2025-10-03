@@ -14,8 +14,13 @@ useHead({
   title: 'Ace Visuall',
   titleTemplate: '%s | Ace Visuall',
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: 'Ace Visuall is a creative agency specializing in visual storytelling and brand identity.' },
+    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Ace Visuall is a creative agency specializing in visual storytelling and brand identity.',
+    },
   ],
 })
 </script>
